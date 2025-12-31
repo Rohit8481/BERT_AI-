@@ -4,7 +4,7 @@ import torch
 from torch.utils.data import Dataset, DataLoader
 from tqdm import tqdm
 from torch.optim import AdamW
-content = pd.read_csv("email_cleaned.csv")
+content = pd.read_csv("your_data_file_name_here.csv")
 content = content.dropna(subset=['label'])
 content['label'] = content['label'].astype(int)
 
@@ -78,3 +78,4 @@ for i in range(echo):
 
 model.save_pretrained('my_email_phishing_detector')
 tokenizer.save_pretrained('my_email_phishing_detector')
+
